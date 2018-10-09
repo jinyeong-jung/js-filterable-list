@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>My Friends List</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="center-align">
+      Friends
+    </h1>
+    <input type="text" id="filterInput" style="margin: 50px 0;" placeholder="이름을 입력하세요.">
+    <ul id="names" class="collection with-header">
+
+      <!-- ㄱ -->
+      <li class="collection-header">
+        <h5>ㄱ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">강혜영</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">권세정</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">고지원</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">고은영</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">김기수</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">김보람</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">김상훈</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">김서현</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">김연주</a>
+      </li>
+
+      <!-- ㄴ -->
+      <li class="collection-header">
+        <h5>ㄴ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">나문희</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">노은지</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">노하루</a>
+      </li>
+
+      <!-- ㅁ -->
+      <li class="collection-header">
+        <h5>ㅁ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">민희정</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">민지은</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">민유성</a>
+      </li>
+
+      <!-- ㅂ -->
+      <li class="collection-header">
+        <h5>ㅂ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">박기영</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박나은</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박상호</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박선우</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박수연</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박지은</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박진석</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">박효정</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">방소연</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">변수현</a>
+      </li>
+
+      <!-- ㅅ -->
+      <li class="collection-header">
+        <h5>ㅅ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">서승연</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">손효정</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">신나라</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">심현주</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">심마루</a>
+      </li>
+
+      <!-- ㅇ -->
+      <li class="collection-header">
+        <h5>ㅇ</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">안주영</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">안희정</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이다혜</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이상원</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이소현</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이수진</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이아름</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">이소현</a>
+      </li>
+
+    </ul>
+  </div>
+
+  <script>
+    // Get input element
+    let filterInput = document.getElementById('filterInput');
+    // Add input listener
+    filterInput.addEventListener('keyup', filterNames);
+
+    function filterNames(){
+      // Get value of input
+      let filterValue = document.getElementById('filterInput').value;
+
+      // Get names ul
+      let ul = document.getElementById('names');
+      // Get lis from ul
+      let li = ul.querySelectorAll('li.collection-item'); //클래스로 element 추출 가능
+
+      // loop through collection-item lis
+      for (var i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+        // if matched
+        if(a.innerHTML.indexOf(filterValue) > -1){
+          li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

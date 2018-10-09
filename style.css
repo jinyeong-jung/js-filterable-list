@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&subset=korean');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.collection {
+  border: none;
+}
+
+.collection.with-header .collection-header {
+  border-bottom: 1px solid #333333;
+  background-color: #333333;
+}
+
+.collection .collection-item {
+  border-bottom: 1px solid #f1f0ee;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #e0474c;
+  -webkit-box-shadow: 0 1px 0 0 #e0474c;
+  box-shadow: 0 1px 0 0 #e0474c;
+}
+
+h1 {
+  color: #333333;
+}
+
+h5 {
+  padding-left: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+a {
+  font-size: 14px;
+  color: #333333;
+}
